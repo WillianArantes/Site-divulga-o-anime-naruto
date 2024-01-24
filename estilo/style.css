@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:black;
+
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+.voltar img{
+    margin: 50px;
+    width: 40px;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Para garantir que a imagem de fundo fique atrás do conteúdo */
+    background-image: url('../imagens/background-naruto2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Ajuste a opacidade conforme necessário */
+}
+.container-titulo{
+    padding: 50px;
+}
+.titulo{
+    font-weight: 600;
+    font-size: 160px;
+    text-align: center;
+    color: rgb(12, 7, 1);
+}
+.sub-titulo{
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    
+}
+.imagem-fundo{
+    background-image: url(../imagens/background-naruto2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    opacity: 0.8;
+    z-index: 1;
+    
+}
+
+.container-titulo{
+    text-align: center;
+    
+}
+.conteudo-informacoes{
+    
+    gap: 80px;
+    margin-top: 270px;
+    text-align: center;
+}
+.conteudo-informacoes .play{
+    display: flex;
+    justify-content: center;
+    padding-left: 150px;
+    
+}
+.play img {
+    cursor: pointer;
+    padding-bottom: 30px;
+    width: 100px;
+}
+.conteudo-informacoes img{
+    border-radius: 15px;
+
+}
+.informacoes p{ 
+    width: 1100px;
+    line-height: 150%;
+    padding: 30px; 
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+.container-titulo p{
+    margin-bottom: 20px;
+}
+.container-titulo h1{
+    font-size: 60px;
+}
+.icones-abaixo{
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-right: 100px;
+    gap: 220px;
+    justify-content: center;
+    
+}
+.icones-abaixo div{
+    display: flex;
+}
+.icones-abaixo .min{
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 900;
+}
+.icones-abaixo img{
+    width: 40px;
+}
+.icones-abaixo p{
+    font-size: 25px;
+    font-weight: 900;
+}
+.entrar-conteudo{
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    padding-left: 60px;
+}
+.assitir-anime{
+    cursor: pointer;
+    background-color: rgb(58, 58, 223);
+    width: 250px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 20px;
+
+   
+}
+.trailer{
+    cursor: pointer;
+    display: flex;
+    background-color: rgb(51, 45, 45);
+    color: white;
+    width: 190px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+.avaliacao{
+    display: flex;
+    justify-content: space-between;
+}
+
+.star-icon{
+    list-style: none;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 60px;/* alterar o tamanho das estrelas */
+}
+/*\2606 - estrela sem cor*/
+.star-icon::before{/*está definindo conteudo caracter estrela na classe star-icon e todas com cor*/
+    content: "\2605";
+}
+.star-icon.ativo ~ .star-icon::before{/*quando elemento estiver na classe o ativo estilo voltara a ser como antes ::before acima*/
+    content: \2606;
+}
+.star-icon:hover ~ .star-icon::before {/*quando passar mouse vai voltar ficar estrela cheia.*/
+    content: "\2606";
+}
+.imagem-anime{
+    display: flex;
+    position: absolute;
+    left: 470px;
+    top: 850px;
+}
+.imagem-anime img{
+    width: 350px;
+    height: 420px;
+    border-radius: 20px;
+}
